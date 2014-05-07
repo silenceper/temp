@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<title><{$title}></title>
+<script type="text/javascript" src="./public/backend/style/js/jquery.min.js"></script>
+<script type="text/javascript" src="./public/library/jquery.plugins/jquery.validate.js"></script>
+<script type="text/javascript" src="./public/backend/style/js/admin.js"></script>
+<script type="text/javascript" src="./public/library/common/common.js"></script>
+<link href="./public/backend/style/css/home.css" type="text/css" rel="stylesheet"/> 
+</head>
+<body>
+<div id="home">
+	<div id="header">
+		<div class="logo fl"><a href="__MODULE__"></a></div>
+ 		<div class="logout fr">欢迎您! <{:session('admin.username')}><a href="<{:U('backend/Public/logout')}>">[退出]</a><a href="/" target="_blank">[首页]</a></div>
+		<div class="top_menu fl">
+			<ul>
+				<li><a href="javascript:menu_change(8,1,'top_menu','left_menu')" class="on" id="top_menu1">控制台</a></li>
+				<li><a href="javascript:menu_change(8,2,'top_menu','left_menu')" id="top_menu2">商品</a></li>
+				<li><a href="javascript:menu_change(8,3,'top_menu','left_menu')" id="top_menu3">会员</a></li>
+				<li><a href="javascript:menu_change(8,4,'top_menu','left_menu')" id="top_menu4">交易</a></li>
+				<li><a href="javascript:menu_change(8,5,'top_menu','left_menu')" id="top_menu5">网站</a></li>
+				<li><a href="javascript:menu_change(8,6,'top_menu','left_menu')" id="top_menu6">图集</a></li>
+                <li><a href="javascript:menu_change(8,7,'top_menu','left_menu')" id="top_menu7">设置</a></li>
+               	<li><a href="javascript:menu_change(8,8,'top_menu','left_menu')" id="top_menu8">管理员</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div class="left_menu fl">
+			
+			<div id="left_menu1" style="display:block">
+				<h3>常用操作</h3>
+				<ul>
+					<li><a href="<{:U('Welcome/index')}>" target="main">欢迎页面</a></li>
+				</ul>
+			</div>	
+			<div id="left_menu2" style="display:none">
+				<h3>商品管理</h3>
+				<ul>
+					<li><a href="<{:U('Goods/index')}>" target="main">商品列表</a></li>
+					<li><a href="<{:U('Goods/add')}>" target="main">添加商品</a></li>
+					<li><a href="<{:U('Recycle/index')}>" target="main">回收站</a></li>
+				</ul>
+				<h3>商品分类</h3>
+				<ul>
+					<li><a href="<{:U('Gcategory/index')}>" target="main">分类列表</a></li>
+					<li><a href="<{:U('Gcategory/add')}>" target="main">添加分类</a></li>
+				</ul>
+				<h3>品牌管理</h3>
+				<ul>
+					<li><a href="<{:U('Brand/index')}>" target="main">品牌列表</a></li>
+					<li><a href="<{:U('Brand/add')}>" target="main">添加品牌</a></li>
+				</ul>
+			</div>
+			<div id="left_menu3" style="display:none">
+				<h3>会员管理</h3>
+				<ul>
+					<li><a href="<{:U('Member/index')}>" target="main">会员列表</a></li>
+					<li><a href="<{:U('Member/add')}>" target="main">添加会员</a></li>
+				</ul>
+				<h3>优惠码</h3>
+				<ul>
+					<li><a href="<{:U('Promote/index')}>" target="main">使用优惠码订单</a></li>
+					<li><a href="<{:U('Promote/code')}>" target="main">所有优惠码</a></li>
+				</ul>
+				<h3>评论管理</h3>
+				<ul>
+					<li><a href="<{:U('Review/index')}>" target="main">评价列表</a></li>
+				</ul>
+			</div>	
+			<div id="left_menu4"  style="display:none">
+				<h3>订单管理</h3>
+				<ul>
+					<li><a href="<{:U('Send/index')}>" target="main">等待发货</a></li>
+					<li><a href="<{:U('Order/index')}>" target="main">订单列表</a></li>
+				</ul>
+				<h3>售后服务</h3>
+				<ul>
+					<li><a href="<{:U('AfterService/index')}>" target="main">售后服务</a></li>
+				</ul>
+			</div>
+			<div id="left_menu5"  style="display:none">
+				<h3>文章分类</h3>
+				<ul>
+					<li><a href="<{:U('Acategory/index')}>" target="main">分类列表</a></li>
+					<li><a href="<{:U('Acategory/add')}>" target="main">添加分类</a></li>
+				</ul>
+				<h3>文章管理</h3>
+				<ul>
+					<li><a href="<{:U('Article/index')}>" target="main">文章列表</a></li>
+					<li><a href="<{:U('Article/add')}>" target="main">添加文章</a></li>
+				</ul>
+                <h3>网页导航</h3>
+				<ul>
+					<li><a href="<{:U('Navigation/index')}>" target="main">导航列表</a></li>
+					<li><a href="<{:U('Navigation/add')}>" target="main">添加导航</a></li>
+				</ul>
+				<h3>联系方式</h3>
+				<ul>
+					<li><a href="<{:U('Contact/index')}>" target="main">联系方式列表</a></li>
+					<li><a href="<{:U('Contact/add')}>" target="main">添加联系方式</a></li>
+				</ul>	
+			</div>
+			<div id="left_menu6" style="display:none">
+				<h3>图集管理</h3>
+				<ul>
+					<li><a href="<{:U('Atlas/index')}>" target="main">图集列表</a></li>
+					<li><a href="<{:U('Atlas/add')}>" target="main">添加图集</a></li>
+				</ul>
+				<h3>图片管理</h3>
+				<ul>
+					<li><a href="<{:U('Image/index')}>" target="main">图片列表</a></li>
+					<li><a href="<{:U('Image/add')}>" target="main">添加图片</a></li>
+				</ul>		
+			</div>
+			<div id="left_menu7" style="display:none">
+				<h3>配送方式</h3>
+				<ul>
+					<li><a href="<{:U('Shipping/index')}>" target="main">配送列表</a></li>
+					<li><a href="<{:U('Shipping/add')}>" target="main">添加配送</a></li>
+				</ul>
+				<h3>区域管理</h3>
+				<ul>
+					<li><a href="<{:U('ShippingArea/index')}>" target="main">区域列表</a></li>
+					<li><a href="<{:U('ShippingArea/addP')}>" target="main">添加省份</a></li>
+				</ul>
+				<h3>支付方式</h3>
+				<ul>
+					<li><a href="<{:U('payment/index')}>" target="main">支付列表</a></li>
+				</ul>
+				<h3>网站设置</h3>
+				<ul>
+					<li><a href="<{:U('Setting/base')}>" target="main">基本设置</a></li>
+					<li><a href="<{:U('Setting/sms')}>" target="main">短信接口设置</a></li>
+					<li><a href="<{:U('Setting/email')}>" target="main">Email设置</a></li>
+				</ul>	
+				<h3>打印模板</h3>
+				<ul>
+					<li><a href="<{:U('Pt/index')}>" target="main">模板列表</a></li>
+					<li><a href="<{:U('Pt/add')}>" target="main">添加模板</a></li>
+					<li><a href="<{:U('Pt/info')}>" target="main">寄件人信息</a></li>
+				</ul>
+			</div>
+			<div id="left_menu8" style="display:none">
+				<if condition="session('admin.is_super') eq '1'">   
+					<h3>管理员</h3>
+					<ul>
+						<li><a href="<{:U('Admin/index')}>" target="main">管理员列表</a></li>
+						<li><a href="<{:U('Admin/add')}>" target="main">添加管理员</a></li>
+					</ul>		
+				</if>
+				<h3>修改密码</h3>
+				<ul>
+					<li><a href="<{:U('ChangeProfile/password')}>" target="main">修改密码</a></li>
+				</ul>		
+			</div>
+		</div>
+		<div class="main_mess"></div>
+		<div class="right_main"  style="position:relative; overflow:hidden">
+			  <iframe name="main" id="rightMain" src="http://www.baidu.com"  frameborder="false" scrolling="auto" style="overflow-x:hidden;border:none;" width="100%" allowtransparency="true" height:200></iframe>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">function windowW(){
+	if($(window).width()<980){
+
+			$('#header').css('width',980+'px');
+
+			$('#content').css('width',980+'px');
+
+			$('body').attr('scroll','');
+
+			$('body').css('overflow','');
+	}
+
+}
+
+windowW();
+
+$(window).resize(function(){
+
+	if($(window).width()<980){
+
+		windowW();
+
+	}else{
+
+		$('#header').css('width','auto');
+
+		$('#content').css('width','auto');
+
+		$('body').attr('scroll','no');
+
+		$('body').css('overflow','hidden');
+
+	}
+
+});
+
+window.onresize = function(){
+
+	var heights = document.documentElement.clientHeight-95;
+
+	document.getElementById('rightMain').height = heights;
+
+	var openClose = $("#rightMain").height()+9;
+
+	$('#center_frame').height(openClose+9);
+
+	$("#openClose").height(openClose+30);
+
+}
+
+window.onresize();
+
+//刷新
+function Refresh() {
+
+	var src = $("#rightMain").attr('src');
+
+	$("#rightMain").attr('src',src);
+
+}
+//右侧菜单
+$('.left_menu li').click(function(){
+	$('.left_menu li').removeClass('current');
+	this.className="current";
+});
+</script>
+</body>
+</html>
